@@ -1,0 +1,67 @@
+.page-title {
+  display: block !important;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 10px;
+}
+.form-container {
+  width: 400px;
+  padding-top: 100;
+  margin: auto;
+}
+.logoClass1 {
+  position: relative;
+  margin-top: 400px;
+  margin-left: 550px;
+}
+.logoClass {
+  display: inline-flex; /* make flex for centring */
+  justify-content: center; /* vertically centre */
+  align-items: center; /* horizontally centre */
+  position: relative; /* for adding absolute positioned children */
+  min-height: 50px; /* test value to show text is centred */
+  overflow: hidden; /* hide pseudo elements when not shown */
+  z-index: 0;
+}
+.homeEle {
+  z-index: 2;
+}
+
+.logoClass:before,
+.logoClass:after {
+  content: ""; /* make coloured animatable bits */
+  display: block;
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  transition: all 1s ease-in;
+  z-index: 1;
+}
+
+.logoClass:before {
+  top: 0;
+  right: 100%;
+  background: darkcyan;
+}
+
+.logoClass:hover:before {
+  right: 0;
+}
+
+.logoClass:after {
+  top: 50%;
+  left: 100%;
+  background: powderblue;
+}
+
+.logoClass:hover:after {
+  left: 0;
+}
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 150%;
+  background-color: grey;
+  color: white;
+  text-align: center;
+}
