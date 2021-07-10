@@ -30,7 +30,7 @@ function Home(){
                 <Grid.Column>
                 <PostForm/></Grid.Column>
             )}
-            {loading ? (
+            {user && loading ? (
                 <h1>Loading posts..</h1>
                 ):(
                 <Transition.Group>
